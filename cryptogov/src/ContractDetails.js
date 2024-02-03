@@ -6,11 +6,22 @@ import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 import App from "./App";
 
 function ContractDetails(props) {
+    
+    function createDetails(){
+        var ourString = ""
+
+        for(const[key, value] of Object.entries(props.data)){
+            ourString = ourString + key + ": " + value + "\n";
+        }
+
+        return ourString
+    }
+
     return (
         <Container className = "ContractList">
             <Box>
                 <Typography>
-                    test
+                    {createDetails()}
                 </Typography>
 
             </Box>
