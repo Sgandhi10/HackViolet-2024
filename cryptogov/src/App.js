@@ -7,12 +7,16 @@ import { useState, useEffect } from "react";
 import {Box, Container} from "@mui/system";
 import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 
-//cont selectedContract = useState()
-
 function App() {
+
+    const [selectedContract, setSelectedContract] = useState(null); //Currently selected/clicked contract box
 
     //Called when logout button is pushed; logs out user and returns to logout page
     function handleLogOut(event){
+    }
+
+    function dummyData() {
+        
     }
 
   return (
@@ -30,19 +34,17 @@ function App() {
               </AppBar>
           </Box>
           <Box sx={{ display: 'grid', gridTemplateColumns: 'auto auto'}}>
-
-          </Box>
-      </Container>
-  );
-}
-
-/*
               <ContractList
 
+                  sx={{bgcolor: 'white', width: '100%', height: '100%'}}
               />
 
               <ContractDetails
 
               />
-*/
+          </Box>
+      </Container>
+  );
+}
+
 export default App;
