@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import {Box, Container} from "@mui/system";
 import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 import App from "./App";
+import ContractListItem from "./ContractListItem";
 
 function ContractDetails(props) {
     
@@ -18,13 +19,14 @@ function ContractDetails(props) {
             ourString = ourString + key + ": " + value + "\n";
         }
 
+        console.log(ourString);
         return ourString
     }
 
     return (
         <Container className = "ContractList">
-            <Box>
-                <Typography>
+            <Box sx = {{whiteSpace: "pre-line"}}>
+                <Typography position = "static" multiline="true" sx={{textAlign: "left", flexGrow : 1}}>
                     {createDetails()}
                 </Typography>
 

@@ -63,7 +63,7 @@ export default function MainPage() {
             </Toolbar>
         </AppBar>
     </Box>
-    <Box sx={{ display: 'grid', gridTemplateColumns: 'auto auto'}}>
+    <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'}}>
         <ContractList
             sx={{bgcolor: 'white', width: '100%', height: '100%'}}
             clickHandler = {handleContractClick}
@@ -71,6 +71,7 @@ export default function MainPage() {
             />
 
             <ContractDetails
+                sx={{width: '100%', height: '100%'}}
                 data = {selectedContract}
             />
         </Box>
