@@ -53,7 +53,7 @@ export default function MainPage() {
     return ( <Container className="App">
     <Box>
         <AppBar position="static">
-            <Toolbar sx = {{whiteSpace: "pre-line"}}>
+            <Toolbar sx = {{whiteSpace: "pre-line", background: "linear-gradient(to right, #3873db, #9656c8);"}}>
                 <Typography sx={{ fontFamily: 'arial', mr: 2, flexGrow: 1 }}>
                     CryptoGov
                 </Typography>
