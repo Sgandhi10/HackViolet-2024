@@ -1,8 +1,65 @@
-.gradient-background {
-    background: linear-gradient(to right, #b24f36, #6e4f37);
-    height: 100px;
+  .pageContainer {
+    flex-direction: column;
+    background: linear-gradient(to right, #3873db, #9656c8);
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #cf7777;
+    justify-content: center;
+    height: 100vh;
+    color: #ffffff;
+  }
+  
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 64px;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+  }
+  
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .inputBox > .errorLabel {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .inputBox2 {
+    height: 48px;
+    width: 400px;
+    font-size: large;
+    border-radius: 8px;
+    border: 2px solid rgb(0, 0, 0);
+    padding-left: 8px;
+  }
+
+  .button {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #3873db;
+    color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    height: 48px;
+    width: 300px;
+  }
+  .button:hover {
+    background-color: #3892db;
+    transition: background-color 0.3s ease;
   }
