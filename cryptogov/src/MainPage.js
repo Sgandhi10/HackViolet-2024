@@ -42,8 +42,9 @@ export default function MainPage() {
     }
 
     function handleContractClick(event){
-        console.log("Hello world!")
-        console.log(event.target.id);
+        const index = event.target.id;
+        console.log(dummyData.contracts[index].name);
+        setSelectedContract(dummyData.contracts[index]);
     }
 
     return ( <Container className="App">
@@ -67,7 +68,7 @@ export default function MainPage() {
             />
 
             <ContractDetails
-
+                data = {selectedContract}
             />
         </Box>
     </Container>

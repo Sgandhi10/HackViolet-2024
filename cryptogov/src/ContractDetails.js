@@ -5,7 +5,7 @@ import {Box, Container} from "@mui/system";
 import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 import App from "./App";
 
-function ContractDetails() {
+function ContractDetails(props) {
     return (
         <Container className = "ContractList">
             <Box>
