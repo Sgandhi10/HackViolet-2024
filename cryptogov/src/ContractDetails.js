@@ -10,6 +10,10 @@ function ContractDetails(props) {
     function createDetails(){
         var ourString = ""
 
+        if(props.data == null) {
+            return "Select a contract for more details";
+        }
+
         for(const[key, value] of Object.entries(props.data)){
             ourString = ourString + key + ": " + value + "\n";
         }
