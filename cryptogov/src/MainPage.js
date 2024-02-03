@@ -60,7 +60,7 @@ export default function MainPage() {
                 <Typography sx={{ fontFamily: 'arial', mr: 4}}>
                     {"user: " + "user" + "\n" +"hourly wage: " + "number"}
                 </Typography>
-                <Button color = "inherit" onClick = {handleLogOut} sx={{ fontFamily: 'arial'}}>
+                <Button onClick = {handleLogOut} sx={{ fontFamily: 'arial', backgroundColor: "white", color: "black", border: 2, borderWidth: 2, '&:hover' : {backgroundColor: "#c9c9c9"}}}>
                     Log out
                 </Button>
             </Toolbar>
