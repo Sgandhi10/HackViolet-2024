@@ -25,7 +25,7 @@ function ContractDetails(props) {
 
     return (
         <Container className = "ContractList">
-            <Box sx = {{whiteSpace: "pre-line"}}>
+            <Box sx = {{whiteSpace: "pre-line", marginTop: 2, border: 2, borderRadius: 2, padding: 2}}>
                 <Typography position = "static" multiline="true" sx={{textAlign: "left", flexGrow : 1}}>
                     {createDetails()}
                 </Typography>
