@@ -37,8 +37,11 @@ export default function MainPage() {
 
     const [selectedContract, setSelectedContract] = useState(null); //Currently selected/clicked contract box
 
+    const navigate = useNavigate();
+
     //Called when logout button is pushed; logs out user and returns to logout page
-    function handleLogOut(event){
+    function handleLogOut(){
+        navigate("/")
     }
 
     function handleContractClick(event){
