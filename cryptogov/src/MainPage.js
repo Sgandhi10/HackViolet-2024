@@ -14,11 +14,9 @@ export default function MainPage() {
     }
 
     function dummyData() {
-        
     }
 
-    return 
-    (<Container className="App">
+    return ( <Container className="App">
     <Box>
         <AppBar position="static">
             <Toolbar>
