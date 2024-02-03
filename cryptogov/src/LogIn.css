@@ -1,0 +1,8 @@
+.gradient-background {
+    background: linear-gradient(to right, #b24f36, #6e4f37);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cf7777;
+  }
