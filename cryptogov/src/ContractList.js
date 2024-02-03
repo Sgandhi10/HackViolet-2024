@@ -11,8 +11,8 @@ function ContractList(props) {
         <Container className = "ContractList">
             <Box>
                 {props.dummyData.contracts.map((contract, i) => (
-                    <Box>
-                <ContractListItem key = {i} indexNum = {i} clickHandler = {props.clickHandler}>
+                    <Box key = {i}>
+                <ContractListItem indexNum = {i} clickHandler = {props.clickHandler}>
                 </ContractListItem>
                     </Box>
                 ))}
