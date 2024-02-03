@@ -10,7 +10,7 @@ function ContractList(props) {
     return (
         <Container className = "ContractList">
             <Box>
-                <ContractListItem indexNum = {1} clickHandler = {props.clickHandler}>
+                <ContractListItem indexNum = {2} clickHandler = {props.clickHandler}>
                 </ContractListItem>
             </Box>
         </Container>

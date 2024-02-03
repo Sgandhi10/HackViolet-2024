@@ -13,11 +13,39 @@ export default function MainPage() {
     function handleLogOut(event){
     }
 
+    //dmumy
     function dummyData() {
+        return {
+            "contracts": [{
+                "name": "gisaflrbr",
+                "description": "descrrepi",
+                "status": "working",
+                "cid": 1,
+                "hoursWorked": 23,
+                "cost": 30004
+            },
+                {
+                    "name": "argagaga",
+                    "description": "r",
+                    "status": "broken",
+                    "cid": 30,
+                    "hoursWorked": 1,
+                    "cost": 3
+                },
+                {
+                    "name": "dumy 3",
+                    "description": "idiot",
+                    "status": "kaput",
+                    "cid": 3,
+                    "hoursWorked": 10000,
+                    "cost": 50000000000000
+                }]
+        };
     }
 
-    function handleContractClick(){
+    function handleContractClick(event){
         console.log("Hello world!")
+        console.log(event.target.id);
     }
 
     return ( <Container className="App">
