@@ -16,6 +16,10 @@ export default function MainPage() {
     function dummyData() {
     }
 
+    function handleContractClick(){
+        console.log("Hello world!")
+    }
+
     return ( <Container className="App">
     <Box>
         <AppBar position="static">
@@ -33,6 +37,7 @@ export default function MainPage() {
         <ContractList
 
             sx={{bgcolor: 'white', width: '100%', height: '100%'}}
+            clickHandler = {handleContractClick}
             />
 
             <ContractDetails
