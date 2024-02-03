@@ -53,9 +53,12 @@ export default function MainPage() {
     return ( <Container className="App">
     <Box>
         <AppBar position="static">
-            <Toolbar>
+            <Toolbar sx = {{whiteSpace: "pre-line"}}>
                 <Typography sx={{ fontFamily: 'arial', mr: 2, flexGrow: 1 }}>
                     CryptoGov
+                </Typography>
+                <Typography sx={{ fontFamily: 'arial', mr: 4}}>
+                    {"user: " + "user" + "\n" +"hourly wage: " + "number"}
                 </Typography>
                 <Button color = "inherit" onClick = {handleLogOut} sx={{ fontFamily: 'arial'}}>
                     Log out
