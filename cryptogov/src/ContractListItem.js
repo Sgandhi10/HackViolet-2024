@@ -4,3 +4,5 @@ function ContractListItem(props){
         {"Contract no. " + dataIndex}
     </button>
 }
+
+export default ContractListItem;
