@@ -44,6 +44,9 @@ export default function MainPage() {
         navigate("/")
     }
 
+    function getData() {
+        return dummyData;
+    }
     function handleContractClick(event){
         const index = event.target.id;
         console.log(dummyData.contracts[index].name);
