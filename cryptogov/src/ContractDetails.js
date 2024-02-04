@@ -16,7 +16,7 @@ function ContractDetails(props) {
         }
 
         for(const[key, value] of Object.entries(props.data)){
-            ourString = ourString + key + ": " + value + "\n";
+            ourString = ourString + key + ": " + value + "\n\n";
         }
 
         console.log(ourString);
