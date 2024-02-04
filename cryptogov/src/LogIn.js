@@ -21,17 +21,17 @@ export default function Login(props) {
     <br />
     <div>
         <input
-            value={privKey}
-            placeholder="Enter your Private Key"
-            onChange={ev => setPrivKey(ev.target.value)}
+            value={pubKey}
+            placeholder="Enter your Public Key"
+            onChange={ev => setPubKey(ev.target.value)}
             className={"inputBox"} />
     </div>
     <br />
     <div>
         <input
-            value={pubKey}
-            placeholder="Enter your Public Key"
-            onChange={ev => setPubKey(ev.target.value)}
+            value={privKey}
+            placeholder="Enter your Private Key"
+            onChange={ev => setPrivKey(ev.target.value)}
             className={"inputBox"} />
     </div>
     <br />
