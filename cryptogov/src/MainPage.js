@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ContractList from './ContractList.js';
 import ContractDetails from './ContractDetails.js';
+import ContractAdd from './ContractAdd.js';
 import {Box, Container} from "@mui/system";
 import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 
@@ -91,10 +92,16 @@ export default function MainPage() {
             dummyData = {dummyData}
             />
 
-            <ContractDetails
+        {!addingContract && <ContractDetails
                 sx={{width: '100%', height: '100%'}}
                 data = {selectedContract}
-            />
+            /> }
+
+        {addingContract && <ContractAdd
+            sx={{width: "100%", height: "100%"}}
+            handleFinishAdd = {handleFinishAdd}
+        />
+            }
         </Box>
     </Container>
     );
