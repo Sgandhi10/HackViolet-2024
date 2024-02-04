@@ -15,7 +15,7 @@ function ContractList(props) {
                 </Button>
                 {props.dummyData.contracts.map((contract, i) => (
                     <Box key = {i} sx={{marginTop: 2}}>
-                <ContractListItem indexNum = {i} clickHandler = {props.clickHandler} contract = {contract}>
+                <ContractListItem indexNum = {i} clickHandler = {props.clickHandler} contract = {contract} selectedContract = {props.selectedContract}>
                 </ContractListItem>
                     </Box>
                 ))}

@@ -19,7 +19,6 @@ function ContractDetails(props) {
             ourString = ourString + key + ": " + value + "\n\n";
         }
 
-        console.log(ourString);
         return ourString
     }
 

@@ -37,7 +37,8 @@ const dummyData = {
 export default function MainPage() {
 
     const [selectedContract, setSelectedContract] = useState(null); //Currently selected/clicked contract box
-    const [contractData, setContractData] = useState(dummyData); //NOTE: DUMMYDATA IS PLACEHOLDER!!
+    const [selectedContractIndex, setSelectedContractIndex] = useState(-1);
+    const [contractData, setContractData] = useState(dummyData);
     const [addingContract, setAddingContract] = useState(false);
 
     const navigate = useNavigate();
@@ -50,6 +51,7 @@ export default function MainPage() {
     //Update "isAdding" state to true, hiding contract details and making add panel visible
     function handleAddClick() {
         setAddingContract(!addingContract)
+        setSelectedContractIndex(-1);
     }
 
     //Make contract details visible and hide add panel
@@ -67,6 +69,7 @@ export default function MainPage() {
         
         const index = event.target.id;
         setSelectedContract(dummyData.contracts[index]);
+        setSelectedContractIndex(index);
     }
 
     return ( <Container className="App">
@@ -90,6 +93,7 @@ export default function MainPage() {
             sx={{bgcolor: 'white', width: '100%', height: '100%'}}
             clickHandler = {handleContractClick}
             addClickHandler = {handleAddClick}
+            selectedContract = {selectedContractIndex}
             dummyData = {dummyData}
             />
 
