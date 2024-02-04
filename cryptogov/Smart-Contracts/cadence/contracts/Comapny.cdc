@@ -27,6 +27,14 @@ pub contract Company {
             return self.hourlyWage
         }
 
+        pub fun myContracts() : [Int] {
+            return self.contracts
+        }
+
+        pub fun addContract(cid: Int) {
+            self.contracts.append(cid)
+        }
+
     }
 
     // Govt structure
@@ -48,8 +56,8 @@ pub contract Company {
         }
 
         pub fun addHoursWorked(hours: Int, wage: Int) {
-            self.hoursWorked = self.hoursWorked + hours
-            self.cost = self.hoursWorked * wage
+            self.hoursWorked = self.hoursWorked + hours + self.hoursWorked
+            self.cost = self.hoursWorked * wage + self.cost
         }
     }
 
@@ -78,10 +86,25 @@ pub contract Company {
         return self.govContracts[cid]!
     }
 
+    pub fun userExists(username:String): Bool {
+        if let c = self.users[username]{
+            return true
+        }
+        return false
+    }
+
+    pub fun userContracts(username:String): [Int]? {
+        return self.users[username]?.myContracts()
+    }
+
+    pub fun addContractToUser(username: String, cid: Int){
+        self.users[username]?.addContract(cid: cid)
+    }
+
     // Add hours worked and total cost
     pub fun addHoursWorked(username: String, cid: Int, hours: Int){
-        if let c = self.govContracts[cid] {
-            c.addHoursWorked(hours: hours, wage: self.users[username]!.wage())
-        }
+        let c = self.govContracts[cid] 
+        c?.addHoursWorked(hours: hours, wage: self.users[username]!.wage())
+        self.govContracts[cid] = c
     }
 }
