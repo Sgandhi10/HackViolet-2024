@@ -9,9 +9,13 @@ import ContractListItem from "./ContractListItem.js"
 function ContractList(props) {
     return (
         <Container className = "ContractList">
-            <Box>
-                <ContractListItem indexNum = {1} clickHandler = {props.clickHandler}>
+            <Box sx={{marginTop: 2}}>
+                {props.dummyData.contracts.map((contract, i) => (
+                    <Box key = {i} sx={{marginTop: 2}}>
+                <ContractListItem indexNum = {i} clickHandler = {props.clickHandler} contract = {contract}>
                 </ContractListItem>
+                    </Box>
+                ))}
             </Box>
         </Container>
     )
