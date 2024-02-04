@@ -83,7 +83,7 @@ export default function MainPage() {
             </Toolbar>
         </AppBar>
     </Box>
-    <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'}}>
+    <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', width:"100%", height:"100%"}}>
         <ContractList
             sx={{bgcolor: 'white', width: '100%', height: '100%'}}
             clickHandler = {handleContractClick}
