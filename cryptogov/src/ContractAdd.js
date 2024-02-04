@@ -17,7 +17,7 @@ function ContractAdd(props) {
             "Name": name,
             "Description": desc,
             "Status": status,
-            "Cid": cid,
+            "CID": cid,
             "Hours worked": parseFloat(hours),
             "Cost": parseFloat(cost)
         };
