@@ -37,6 +37,7 @@ export default function MainPage() {
 
     const [selectedContract, setSelectedContract] = useState(null); //Currently selected/clicked contract box
     const [contractData, setContractData] = useState(dummyData); //NOTE: DUMMYDATA IS PLACEHOLDER!!
+    const [addingContract, setAddingContract] = useState(false);
 
     const navigate = useNavigate();
 
@@ -47,12 +48,13 @@ export default function MainPage() {
 
     //Update "isAdding" state to true, hiding contract details and making add panel visible
     function handleAddClick() {
-
+        setAddingContract(!addingContract)
     }
 
     //Make contract details visible and hide add panel
     function handleFinishAdd() {
-
+        // Todo: read the text fields and create a new contract
+        setAddingContract(false)
     }
 
     function getData() {
