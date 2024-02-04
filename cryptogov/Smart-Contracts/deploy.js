@@ -1,8 +1,9 @@
-import path from "path";
-import { init, emulator, deployContractByName } from "@onflow/flow-js-testing";
+console.clear()
+const path = require("path");
+const { init, emulator, deployContractByName } = require("@onflow/flow-js-testing");
 
 const main = async () => {
-  const basePath = path.resolve(__dirname, "../cadence");
+  const basePath = path.resolve(__dirname, ".");
 
   await init(basePath);
   await emulator.start();
@@ -19,7 +20,7 @@ const main = async () => {
 
   const [deploymentResult, err] = await deployContractByName({ to, name });
   console.log({ deploymentResult }, { err });
-  }
+  
 
   await emulator.stop();
 };
