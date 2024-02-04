@@ -4,12 +4,12 @@ import {Toolbar, Button, Typography, TextField, AppBar} from "@mui/material";
 import App from "./App";
 
 function ContractAdd(props) {
-    const [name, setName] = useState("");
-    const [desc, setDesc] = useState("");
-    const [status, setStatus] = useState("");
-    const [cid, setCID] = useState("");
-    const [hours, setHours] = useState("");
-    const [cost, setCost] = useState("");
+    const [name, setName] = useState("N/A");
+    const [desc, setDesc] = useState("N/A");
+    const [status, setStatus] = useState("N/A");
+    const [cid, setCID] = useState("N/A");
+    const [hours, setHours] = useState("N/A");
+    const [cost, setCost] = useState("N/A");
 
     //Collect all information from add contract text fields and add a new entry to the end of the contract dataset
     function handleConfirmAdd(event) {

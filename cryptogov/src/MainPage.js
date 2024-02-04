@@ -78,7 +78,7 @@ export default function MainPage() {
                     CryptoGov
                 </Typography>
                 <Typography sx={{ fontFamily: 'arial', mr: 4}}>
-                    {"user: " + "user" + "\n" +"hourly wage: " + "number"}
+                    {"User: " + "Admin" + "\n" +"Hourly wage: " + "$25"}
                 </Typography>
                 <Button onClick = {handleLogOut} sx={{ fontFamily: 'arial', backgroundColor: "white", color: "black", border: 2, borderWidth: 2, '&:hover' : {backgroundColor: "#c9c9c9"}}}>
                     Log out
