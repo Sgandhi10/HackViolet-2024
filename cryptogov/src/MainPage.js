@@ -66,7 +66,6 @@ export default function MainPage() {
         setAddingContract(false)
         
         const index = event.target.id;
-        console.log(dummyData.contracts[index].name);
         setSelectedContract(dummyData.contracts[index]);
     }
 
