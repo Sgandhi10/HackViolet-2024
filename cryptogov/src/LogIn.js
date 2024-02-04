@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import './LogIn.css';
+import { VERIFIED_USERS } from './Users';
 
 export default function Login() {
     const [privKey, setPrivKey] = useState("")
@@ -11,7 +12,21 @@ export default function Login() {
 
     //Function for when the log in button is pressed
     const onButtonClick = () => {
-        navigate("/loginPass")
+       var verified = false
+        
+       VERIFIED_USERS.users.map((user, i) => {
+            if (user.privkey === privKey && user.pubkey === pubKey) {
+                verified = true;
+            }
+        });
+
+        //When verified navigate and when not alert 
+        if (verified) {
+            navigate("/loginPass")
+            
+        } else {
+            alert("Not a verified public or private key")
+        }
     }
 
     return <div className={"pageContainer"}>
