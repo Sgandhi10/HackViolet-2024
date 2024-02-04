@@ -53,9 +53,9 @@ export default function MainPage() {
     }
 
     //Make contract details visible and hide add panel
-    function handleFinishAdd() {
-        // Todo: read the text fields and create a new contract
-        setAddingContract(false)
+    function handleFinishAdd(event, newContract) {
+        dummyData.contracts.push(newContract);
+        setAddingContract(false);
     }
 
     function getData() {
