@@ -23,6 +23,10 @@ pub contract Company {
             self.password = password
         }
 
+        pub fun wage() : Int {
+            return self.hourlyWage
+        }
+
     }
 
     // Govt structure
@@ -43,9 +47,9 @@ pub contract Company {
             self.cost = cost
         }
 
-        pub fun addHoursWorked(hours: Int) {
+        pub fun addHoursWorked(hours: Int, wage: Int) {
             self.hoursWorked = self.hoursWorked + hours
-            self.cost = self.hoursWorked * 100
+            self.cost = self.hoursWorked * wage
         }
     }
 
@@ -75,9 +79,9 @@ pub contract Company {
     }
 
     // Add hours worked and total cost
-    pub fun addHoursWorked(cid: Int, hours: Int){
+    pub fun addHoursWorked(username: String, cid: Int, hours: Int){
         if let c = self.govContracts[cid] {
-            c.addHoursWorked(hours: hours)
+            c.addHoursWorked(hours: hours, wage: self.users[username]!.wage())
         }
     }
 }

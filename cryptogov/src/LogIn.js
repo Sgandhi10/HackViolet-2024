@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import './LogIn.css';
 
-export default function Login(props) {
+export default function Login() {
     const [privKey, setPrivKey] = useState("")
     const [pubKey, setPubKey] = useState("")
     
