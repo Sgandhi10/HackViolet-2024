@@ -13,7 +13,7 @@ function ContractList(props) {
                 <Button sx={{color: "black", backgroundColor: "#ffffff", border: 2, width:"30%", '&:hover' : {backgroundColor: "#c9c9c9"}}} size = "large" onClick = {props.addClickHandler}>
                     Add
                 </Button>
-                {props.dummyData.contracts.map((contract, i) => (
+                {props.data.contracts.map((contract, i) => (
                     <Box key = {i} sx={{marginTop: 2}}>
                 <ContractListItem indexNum = {i} clickHandler = {props.clickHandler} contract = {contract} selectedContract = {props.selectedContract}>
                 </ContractListItem>

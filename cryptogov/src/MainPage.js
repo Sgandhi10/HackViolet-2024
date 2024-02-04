@@ -6,8 +6,7 @@ import ContractAdd from './ContractAdd.js';
 import {Box, Container} from "@mui/system";
 import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 
-//dmumy
-const dummyData = {
+const data = {
     "contracts": [{
         "Name": "Department of Defense",
         "Description": "OUSD (R&E) CRITICAL TECHNOLOGY AREA(S): Biotechnology; Advanced Materials OBJECTIVE: The objective of this topic is to develop applied research toward an innovative capability to improve water surveillance at point-of-need.",
@@ -38,7 +37,7 @@ export default function MainPage() {
 
     const [selectedContract, setSelectedContract] = useState(null); //Currently selected/clicked contract box
     const [selectedContractIndex, setSelectedContractIndex] = useState(-1);
-    const [contractData, setContractData] = useState(dummyData);
+    const [contractData, setContractData] = useState(data);
     const [addingContract, setAddingContract] = useState(false);
 
     const navigate = useNavigate();
@@ -56,19 +55,16 @@ export default function MainPage() {
 
     //Make contract details visible and hide add panel
     function handleFinishAdd(event, newContract) {
-        dummyData.contracts.push(newContract);
+        data.contracts.push(newContract);
+        setContractData(data);
         setAddingContract(false);
-    }
-
-    function getData() {
-        return dummyData;
     }
 
     function handleContractClick(event){
         setAddingContract(false)
         
         const index = event.target.id;
-        setSelectedContract(dummyData.contracts[index]);
+        setSelectedContract(contractData.contracts[index]);
         setSelectedContractIndex(index);
     }
 
@@ -94,7 +90,7 @@ export default function MainPage() {
             clickHandler = {handleContractClick}
             addClickHandler = {handleAddClick}
             selectedContract = {selectedContractIndex}
-            dummyData = {dummyData}
+            data = {contractData}
             />
 
         {!addingContract && <ContractDetails
