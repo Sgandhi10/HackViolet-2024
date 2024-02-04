@@ -14,12 +14,12 @@ function ContractAdd(props) {
     //Collect all information from add contract text fields and add a new entry to the end of the contract dataset
     function handleConfirmAdd(event) {
         let newContract = {
-            "name": name,
-            "description": desc,
-            "status": status,
-            "cid": cid,
-            "hoursWorked": parseFloat(hours),
-            "cost": parseFloat(cost)
+            "Name": name,
+            "Description": desc,
+            "Status": status,
+            "Cid": cid,
+            "Hours worked": parseFloat(hours),
+            "Cost": parseFloat(cost)
         };
         props.handleFinishAdd(event, newContract);
     }

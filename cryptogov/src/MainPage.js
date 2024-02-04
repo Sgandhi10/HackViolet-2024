@@ -9,28 +9,28 @@ import {Toolbar, Button, Typography, AppBar} from "@mui/material";
 //dmumy
 const dummyData = {
     "contracts": [{
-        "name": "Department of Defense",
-        "description": "OUSD (R&E) CRITICAL TECHNOLOGY AREA(S): Biotechnology; Advanced Materials OBJECTIVE: The objective of this topic is to develop applied research toward an innovative capability to improve water surveillance at point-of-need.",
-        "status": "working",
-        "cid": "SOCOM244-003",
-        "hoursWorked": 23,
-        "cost": 30004
+        "Name": "Department of Defense",
+        "Description": "OUSD (R&E) CRITICAL TECHNOLOGY AREA(S): Biotechnology; Advanced Materials OBJECTIVE: The objective of this topic is to develop applied research toward an innovative capability to improve water surveillance at point-of-need.",
+        "Status": "working",
+        "CID": "SOCOM244-003",
+        "Hours worked": 23,
+        "Cost": 30004
     },
     {
-        "name": "Air Force",
-        "description": "The technology within this topic is restricted under the International Traffic in Arms Regulation (ITAR), 22 CFR Parts 120-130, which controls the export and import of defense-related material and services, including export of sensitive technical data, or the Export Administration Regulation (EAR), 15 CFR Parts 730-774, which controls dual use items. Offerors must disclose any proposed use of foreign nationals (FNs), their country(ies) of origin, the type of visa or work permit possessed, and the statement of work (SOW) tasks intended for accomplishment by the FN(s) in accordance with the Announcement. Offerors are advised foreign nationals proposed to perform on this topic may be restricted due to the technical data under US Export Control Laws.",
-        "status": "working",
-        "cid": "AF24A-T001",
-        "hoursWorked": 1,
-        "cost": 30000
+        "Name": "Air Force",
+        "Description": "The technology within this topic is restricted under the International Traffic in Arms Regulation (ITAR), 22 CFR Parts 120-130, which controls the export and import of defense-related material and services, including export of sensitive technical data, or the Export Administration Regulation (EAR), 15 CFR Parts 730-774, which controls dual use items. Offerors must disclose any proposed use of foreign nationals (FNs), their country(ies) of origin, the type of visa or work permit possessed, and the statement of work (SOW) tasks intended for accomplishment by the FN(s) in accordance with the Announcement. Offerors are advised foreign nationals proposed to perform on this topic may be restricted due to the technical data under US Export Control Laws.",
+        "Status": "working",
+        "CID": "AF24A-T001",
+        "Hours worked": 1,
+        "Cost": 30000
     },
     {
-        "name": "Health and Human Services",
-        "description": "Since its inception in 1982, the NIH SBIR program has provided the small business community with seed funding to support the development of a broad array of commercial products to detect, diagnose, treat, and prevent disease.? It provides an important funding mechanism for bringing new interventions to patients and clinicians.",
-        "status": "inactive",
-        "cid": "RFA-HL-23-008",
-        "hoursWorked": 9,
-        "cost": 19000
+        "Name": "Health and Human Services",
+        "Description": "Since its inception in 1982, the NIH SBIR program has provided the small business community with seed funding to support the development of a broad array of commercial products to detect, diagnose, treat, and prevent disease.? It provides an important funding mechanism for bringing new interventions to patients and clinicians.",
+        "Status": "inactive",
+        "CID": "RFA-HL-23-008",
+        "Hours worked": 9,
+        "Cost": 19000
     }]
 };
 
